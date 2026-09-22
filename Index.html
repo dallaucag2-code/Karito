@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>Para Karito 🌻</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at top,#fff9e8,#f6e8c1,#ead39b);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow-x:hidden;
+
+    padding:20px;
+
+}
+
+
+
+.container{
+
+    width:100%;
+    max-width:500px;
+
+}
+
+
+
+.card{
+
+    background:rgba(255,255,255,.92);
+
+    border-radius:28px;
+
+    padding:35px 22px;
+
+    text-align:center;
+
+    border:1px solid rgba(191,145,35,.35);
+
+    box-shadow:
+    0 20px 50px rgba(120,90,20,.25);
+
+    animation:entrada 1.2s ease;
+
+}
+
+
+
+.flower{
+
+    font-size:65px;
+
+    animation:flotar 3s infinite ease-in-out;
+
+}
+
+
+
+h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#b8860b;
+
+    font-size:clamp(32px,8vw,48px);
+
+    line-height:1.1;
+
+    margin:15px 0;
+
+}
+
+
+
+.subtitle{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:15px;
+
+    color:#796437;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+}
+
+
+
+button{
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(135deg,#d4af37,#f7dc82);
+
+    color:#5c4300;
+
+    font-family:'Poppins',sans-serif;
+
+    font-weight:500;
+
+    font-size:15px;
+
+    box-shadow:0 10px 25px rgba(184,134,11,.3);
+
+}
+
+
+
+.carta{
+
+    display:none;
+
+    animation:aparecer 1.3s ease;
+
+}
+
+
+
+.carta h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#b8860b;
+
+    font-size:38px;
+
+    margin:15px 0 25px;
+
+}
+
+
+
+.texto{
+
+    font-family:'Poppins',sans-serif;
+
+    color:#5d4b2b;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    text-align:center;
+
+}
+
+
+
+.cierre{
+
+    margin-top:30px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    color:#b8860b;
+
+}
+
+
+
+.firma{
+
+    margin-top:15px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:15px;
+
+    color:#80662b;
+
+    font-style:italic;
+
+}
+
+
+
+.luz{
+
+    position:fixed;
+
+    width:7px;
+
+    height:7px;
+
+    background:#e8bd35;
+
+    border-radius:50%;
+
+    opacity:.6;
+
+    animation:subir linear infinite;
+
+}
+
+
+
+@keyframes entrada{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+@keyframes aparecer{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+@keyframes flotar{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+
+
+@keyframes subir{
+
+from{
+
+transform:translateY(100vh);
+
+}
+
+to{
+
+transform:translateY(-10vh);
+
+}
+
+}
+
+
+
+/* Ajustes celulares pequeños */
+
+@media(max-width:360px){
+
+.card{
+
+padding:28px 18px;
+
+}
+
+
+.flower{
+
+font-size:55px;
+
+}
+
+
+.carta h2{
+
+font-size:32px;
+
+}
+
+
+.texto{
+
+font-size:14px;
+
+}
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<script>
+
+for(let i=0;i<18;i++){
+
+let luz=document.createElement("div");
+
+luz.className="luz";
+
+luz.style.left=Math.random()*100+"vw";
+
+luz.style.animationDuration=(5+Math.random()*5)+"s";
+
+luz.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(luz);
+
+}
+
+</script>
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+<div id="inicio">
+
+
+<div class="flower">
+🌻
+</div>
+
+
+<h1>
+Para la mejor amiga del mundo mundial
+</h1>
+
+
+<p class="subtitle">
+
+Un pequeño detalle hecho con mucho cariño para recordarte lo especial que eres 💛
+
+</p>
+
+
+<button onclick="abrirCarta()">
+
+Abrir mi regalo ✨
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="carta" id="carta">
+
+
+<div class="flower">
+🌻
+</div>
+
+
+<h2>
+Para ti, Karito 💛
+</h2>
+
+
+<div class="texto">
+
+
+Sé que estos días no han sido fáciles, sé que hay una ausencia que duele y que hay momentos donde el corazón pesa más de lo normal.
+
+
+<br><br>
+
+
+Pero quiero recordarte algo: eres una mujer fuerte, valiente y llena de luz.
+
+
+<br><br>
+
+
+Aunque hoy la tristeza esté presente, Dios sigue caminando contigo, abrazando tu corazón y dándote fuerzas para seguir adelante.
+
+
+<br><br>
+
+
+Quiero que nunca olvides que cuentas conmigo, para escucharte, acompañarte, reír, llorar o simplemente estar.
+
+
+<br><br>
+
+
+Te quiero mucho y deseo que poco a poco vuelvan los días llenos de paz, amor y esperanza. 🌻
+
+
+</div>
+
+
+
+<div class="cierre">
+
+Un abrazo fuerte para ti, amiga 💛
+
+</div>
+
+
+<div class="firma">
+
+Con mucho cariño,<br>
+Daniel
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function abrirCarta(){
+
+document.getElementById("inicio").style.display="none";
+
+document.getElementById("carta").style.display="block";
+
+}
+
+</script>
+
+
+</body>
+</html>
